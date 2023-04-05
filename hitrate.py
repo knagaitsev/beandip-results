@@ -4,9 +4,10 @@ from matplotlib.ticker import PercentFormatter
 # Create some sample data
 x_values = [0, 1000, 5000, 10000, 20000, 40000]
 y_values = [
-    [1, 1, 1, 1, 15.52052017, 32.39532717]
+    [0.0, 0.78369328, 3.796977308, 7.582139841, 15.49588381, 32.39532717],
+    [0.0, 0.5143983658, 2.506887165, 4.950873926, 10.236731, 21.40132551]
 ]
-labels = ['BT (fake)']
+labels = ['BT', 'EP']
 
 # Create a figure and axis object
 fig, ax = plt.subplots()
@@ -19,7 +20,7 @@ for i, y_values_i in enumerate(y_values):
     ax.plot(x_values, y_values_i, color=colors[i], label=labels[i], marker='s')
 
 # Set the legend
-ax.legend(loc='upper right')
+ax.legend(loc='lower right')
 
 # Set the title and axis labels
 ax.set_title('Hit rate percentage of BEANDIP polls')

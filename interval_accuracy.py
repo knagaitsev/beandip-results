@@ -3,9 +3,10 @@ import matplotlib.pyplot as plt
 # Create some sample data
 x_values = [1000, 2000, 3000, 4000, 5000, 8000, 16000]
 y_values = [
-    [1000, 2000, 3000, 4000, 5000, 8000, 16000]
+    [2057, 4178, 7421, 8738, 9334, 11322, 12647],
+    [1551, 2783, 3997, 5044, 6225, 9886, 19602]
 ]
-labels = ['BT (fake)']
+labels = ['BT', 'EP']
 
 # Create a figure and axis object
 fig, ax = plt.subplots()
@@ -18,7 +19,7 @@ for i, y_values_i in enumerate(y_values):
     ax.plot(x_values, y_values_i, color=colors[i], label=labels[i], marker='s')
 
 # Set the legend
-ax.legend(loc='upper right')
+ax.legend(loc='lower right')
 
 # Set the title and axis labels
 ax.set_title('Target poll interval vs. actual interval on RISC-V')
