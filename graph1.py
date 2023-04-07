@@ -5,19 +5,24 @@ from matplotlib.ticker import PercentFormatter
 x_values = [0, 1000, 5000, 10000, 20000, 40000]
 y_values = [
     [1.14661775, 1.060571626, 0.8762191043, 0.7408254022, 0.3453435795, -0.1513553173],
-    [3.493020836, 3.411394111, 3.350234873, 3.272015881, 3.12378268, 2.796719863]
+    [3.493020836, 3.411394111, 3.350234873, 3.272015881, 3.12378268, 2.796719863],
+    [-0.928088501, -0.5164112601, -0.439198961, -0.08769302767, 0.2177053493, 0.3564403376],
+    [11.20650395, 11.0255124, 10.87133631, 10.67769941, 10.38293369, 10.01808202],
+    [-1.156590331, -1.190178663, -1.301925667, -1.404762001, -1.570331464, -1.888753561]
 ]
-labels = ['BT', 'EP']
+labels = ['BT', 'EP', 'MG', 'FT', 'LU']
+
+order = [3, 1, 0, 2, 4]
 
 # Create a figure and axis object
 fig, ax = plt.subplots()
 
 # Set the color scheme
-colors = ['#a3c1ad', '#ffd6ba', '#ffe6e6', '#c2c2d6', '#f5b7b1', '#d2b4de']
+colors = ['#8B7D7B', '#6B8E23', '#CD5C5C', '#4682B4', '#DAA520', '#2F4F4F', '#D2691E', '#1E90FF']
 
 # Iterate through each set of y values and plot the line
-for i, y_values_i in enumerate(y_values):
-    ax.plot(x_values, y_values_i, color=colors[i], label=labels[i], marker='s')
+for i in order:
+    ax.plot(x_values, y_values[i], color=colors[i], label=labels[i], marker='s')
 
 # Set the legend
 ax.legend(loc='upper right', fontsize=13)
