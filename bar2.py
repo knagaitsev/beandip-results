@@ -27,7 +27,5 @@ ax.set_ylim([0, 7000])
 # increase font size of axis labels and values
 ax.tick_params(axis='both', labelsize=18) # increase font size
 
-plt.subplots_adjust(top=0.85)
-
 # display the graph
 plt.show()
